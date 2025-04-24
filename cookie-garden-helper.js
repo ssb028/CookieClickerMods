@@ -169,15 +169,10 @@ class Garden {
 
   static run(config) {
     this.forEachTile((x, y) => {
-      if (config.autoHarvest && !this.tileIsEmpty(x, y)) {
         let tile = this.getTile(x, y);
         let plant = this.getPlant(tile.seedId);
-
-        if (tile.seedId == 18) {
-          console.log(`Tile ${x}, ${y} contains a juicy queenbeet!`);
-          console.log(plant.name);
-        }
-        
+      
+      if (config.autoHarvest && !this.tileIsEmpty(x, y) && plant.name != `Juicy queenbeet`) {        
         if (plant.immortal && config.autoHarvestAvoidImmortals) {
           // do nothing
         } else {
