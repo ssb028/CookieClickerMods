@@ -176,7 +176,7 @@ class Garden {
         let plant = this.getPlant(tile.seedId);
 
         if (tileHasJuicyQB(x, y)) {
-          console.log(`Tile ${x}, ${y} contains a juicy queenbeet!`)
+          console.log(`Tile ${x}, ${y} contains a juicy queenbeet!`);
         }
         
         if (plant.immortal && config.autoHarvestAvoidImmortals) {
