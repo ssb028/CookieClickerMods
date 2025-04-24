@@ -105,8 +105,6 @@ class Garden {
 
   static tileIsEmpty(x, y) { return this.getTile(x, y).seedId == 0; }
   
-  static tileHasJuicyQB(x, y) { return this.getTile(x, y).seedId == 18; }
-  
   static plantSeed(seedId, x, y) {
     let plant = this.getPlant(seedId + 1);
     if (plant.plantable) {
@@ -175,7 +173,7 @@ class Garden {
         let tile = this.getTile(x, y);
         let plant = this.getPlant(tile.seedId);
 
-        if (tileHasJuicyQB(x, y)) {
+        if (tile.seedId == 18) {
           console.log(`Tile ${x}, ${y} contains a juicy queenbeet!`);
         }
         
