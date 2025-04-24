@@ -175,6 +175,7 @@ class Garden {
 
         if (tile.seedId == 18) {
           console.log(`Tile ${x}, ${y} contains a juicy queenbeet!`);
+          console.log(plant.name);
         }
         
         if (plant.immortal && config.autoHarvestAvoidImmortals) {
