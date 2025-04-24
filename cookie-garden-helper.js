@@ -104,7 +104,9 @@ class Garden {
   }
 
   static tileIsEmpty(x, y) { return this.getTile(x, y).seedId == 0; }
-
+  
+  static tileHasJuicyQB(x, y) { return this.getTile(x, y).seedId == 18; }
+  
   static plantSeed(seedId, x, y) {
     let plant = this.getPlant(seedId + 1);
     if (plant.plantable) {
@@ -173,6 +175,10 @@ class Garden {
         let tile = this.getTile(x, y);
         let plant = this.getPlant(tile.seedId);
 
+        if (tileHasJuicyQB(x, y)) {
+          console.log(`Tile ${x}, ${y} contains a juicy queenbeet!`
+        }
+        
         if (plant.immortal && config.autoHarvestAvoidImmortals) {
           // do nothing
         } else {
