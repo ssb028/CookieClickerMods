@@ -1,5 +1,5 @@
 {
-
+//https://rawgit.com/yannprada/cookie-garden-helper/master/cookie-garden-helper.js
 
 const moduleName = 'cookieGardenHelper';
 
